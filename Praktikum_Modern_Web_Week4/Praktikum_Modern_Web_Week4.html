@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Practice Week 4</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <style>
+
+            .padding{
+                padding : 5px 25px
+
+            }
+
+            body{
+                background-color: #d5dbd1;
+            }
+
+
+        </style>
+
+
+    </head>
+    <body>
+
+
+<!--    <div class="container">
+
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="forms.png" alt="" width="72" height="72">
+        <h2>Form Practice </h2>
+        <p class="lead">Example of Bootstrap Forms.</p>
+      </div>
+
+        <div class="row">
+            <div class="col-sm-4 padding">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your name">
+                </div>
+            </div>
+            <div class="col-sm-4 padding">
+                 <div class="form-group">
+                    <label for="exampleFormControlSelect1">Major</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>MT</option>
+                      <option>MIT</option>
+                      <option>SCM</option>
+                    </select>
+                 </div>
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-8 padding">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Email</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your email">
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-6 padding">
+               <div class="form-group">
+                <label for="exampleFormControlTextarea1">Feedback</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+                <input type="submit" value="Submit" onclick="validation()">
+                <p id="submittext"></p>
+            </div>
+
+
+        </div>
+    </div>-->
+
+     <div class="container">
+
+       <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="forms.png" alt="" width="72" height="72">
+        <h2>Form Practice </h2>
+        <p class="lead">Example of Bootstrap Forms.</p>
+      </div>
+
+        <div class="row">
+            <div class="col-md-4 order-md-2 mb-4 padding">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="anime.png" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">Hi I am a cute girl from
+                          your heart, Nice to meet you!!</p>
+                    </div>
+                  </div>
+                <form>
+                    <div class="form-group">
+                      <label for="exampleFormControlFile1">Input your photo's</label>
+                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="col-md-8 order-md-l">
+             <h4 class="mb-3"> User Account Info </h4>
+              <form  method="post" name="validationform" action="#" onsubmit="return validateForm1()">
+
+               <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="firstName">First name</label>
+                    <input class="form-control" type="text" name="firstName" placeholder="" value="">
+
+              </div>
+               <div class="col-md-6 mb-3">
+                    <label for="lastName">Last name</label>
+                    <input type="text" class="form-control" name="lastName" placeholder="" value="" name="lastName">
+
+               </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                     <div class="form-group">
+                    <label for="exampleFormControlInput1">Email</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your email">
+                       </div>
+                </div>
+
+           <div class="col-md-3 mb-3">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Major</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>MT</option>
+                      <option>MIT</option>
+                      <option>SCM</option>
+                    </select>
+                 </div>
+            </div>
+            </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+               <div class="form-group">
+                <label for="exampleFormControlTextarea1">Feedback</label>
+                  <textarea class="form-control" name="feedback" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+              </div>
+
+            </div>
+        </div>
+
+
+          <input type="submit" value="Submit">
+
+            </form>
+        </div>
+     </div>
+   </div>
+
+        <script>
+            function validationButton(){
+                var txt;
+                if (confirm("Thanks for support us")){
+                    txt = "Submitted";
+                    }
+                document.getElementById("submittext").innerHTML = txt;
+                }
+
+
+            function validateForm1() {
+                var x = document.forms["validationform"]["firstName"].value;
+                var y = document.forms["validationform"]["lastName"].value;
+                var z = document.forms["validationform"]["feedback"].value;
+                var fname = x.length
+                if (x == "") {
+                  alert("You need to fill the first name bar");
+                          return false;
+                  }
+
+                if(fname < 10){
+                  alert("You need more than 10 character for the name")
+                      return false;
+                }
+
+                if (y == "") {
+                  alert("You need to fill the last name bar");
+                          return false;
+                  }
+
+                if (z == "") {
+                  alert("You need to fill the feedback bar");
+                          return false;
+                  }
+            }
+
+
+
+        </script>
+
+
+    </body>
+</html>

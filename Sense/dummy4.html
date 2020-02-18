@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style media="screen">
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; }
+
+.design12 {
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  white-space: nowrap;
+  letter-spacing: 3px; }
+
+.btn12 {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden; }
+  .split.left {
+    left: 0;
+    background: url("https://images.pexels.com/photos/1405773/pexels-photo-1405773.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") center center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; }
+    .split.left:before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: rgba(63, 81, 181, 0.7); }
+  .split.right {
+    right: 0;
+    background: url("https://images.pexels.com/photos/247791/pexels-photo-247791.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") center center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; }
+    .split.right:before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: rgba(43, 43, 43, 0.8); }
+  .split.left, .split.left:before, .split.right, .split.right:before {
+    -webkit-transition: 1000ms all ease-in-out;
+    -o-transition: 1000ms all ease-in-out;
+    transition: 1000ms all ease-in-out; }
+
+.container-design {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #333; }
+
+.hover-left .left {
+  width: 75%; }
+
+.hover-left .right {
+  width: 25%; }
+  .hover-left .right:before {
+    z-index: 2; }
+
+.hover-right .right {
+  width: 75%; }
+
+.hover-right .left {
+  width: 25%; }
+  .hover-right .left:before {
+    z-index: 2; }
+
+@media (max-width: 800px) {
+  .design12 {
+    font-size: 2rem; }
+  .btn12 {
+    width: 12rem; } }
+
+@media (max-height: 780px) {
+  .btn12 {
+    top: 60%; } }
+  </style>
+
+  </head>
+  <body>
+    <div class="container-custom container-design">
+  <div class="split left ">
+    <h1 class="font-weight-bold design12 ">The Designer</h1>
+    <a href="#" type="button" class="btn btn-outline-white waves-effect btn12">Read more</a>
+  </div>
+  <div class="split right ">
+    <h1 class="font-weight-bold design12">The Programmer</h1>
+    <a href="#" type="button" class="btn btn-outline-white waves-effect btn12">Read more</a>
+  </div>
+</div>
+<script type="text/javascript">
+  const left = document.querySelector('.left');
+const right = document.querySelector('.right');
+const container = document.querySelector('.container-custom');
+
+left.addEventListener('mouseenter', () => {
+  container.classList.add('hover-left');
+});
+
+left.addEventListener('mouseleave', () => {
+  container.classList.remove('hover-left');
+});
+
+right.addEventListener('mouseenter', () => {
+  container.classList.add('hover-right');
+});
+
+right.addEventListener('mouseleave', () => {
+  container.classList.remove('hover-right');
+});
+</script>
+
+  </body>
+</html>
